@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="">
+        <label>Click button below to move the image to right</label>
+        <img id="myImage" width="150px" height="150px" src="https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930__480.png" /><br><br>
+        <input onclick="moveRight()" value="Click Me" type="button">
+    </form>
+  <script>
+      let imgObj = null;
+      function init() {
+
+          imgObj = document.getElementById('myImage');
+          imgObj.style.position = 'relative';
+          imgObj.style.left = '0px';
+      }
+      function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 100 +'px';
+
+      }
+      window.onload = init;
+  </script>
+</body>
+</html>
